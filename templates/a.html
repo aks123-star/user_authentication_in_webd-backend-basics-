@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="grey">
+
+<h1 style="color:yellow; margin-left:50px">hello {{topic}}</h1>
+<a href="{{link}}" style="color:white; margin-left:50px">HOME</a>
+
+<h1 align="center" style="color:yellow">This is HOME PAGE</h1><br><br><br><br>
+<div bgcolor="" align="center">
+    <h2>Enter two numbers for addition</h2>
+    <form action="expression">
+        <h3>a : <input type="text" name="text1"></h3>
+        <h3>b : <input type="text" name="text2"></h3>
+        <input type="submit">
+</form>
+</div>
+
+
+
+{% if user.is_authenticated %}
+<h2 align="right" ><a href="app4/logout" style="color:yellow; margin-right:200px">logout</a></h2>
+{% else %}
+<h2 align="right" ><a href="app2/signup" style="color:yellow; margin-right:200px">signup</a></h2>
+<h2 align="right" ><a href="app3/login" style="color:yellow; margin-right:200px">login</a></h2>
+{% endif %}
+
+</body>
+</html>
